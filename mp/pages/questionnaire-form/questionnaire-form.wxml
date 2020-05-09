@@ -1,0 +1,57 @@
+
+<view class="head_img">
+    <image class="img" mode="widthFix" src="{{imgUrl}}/img/form_top.jpg"></image>
+</view>
+
+<view class="form_box">
+    <!-- <image class="logo" mode="widthFix" src="{{imgUrl}}/img/logo.png"></image> -->
+    
+    <view class="dl" wx:for="{{formData}}" wx:key="name" wx:for-index="keyName" wx:for-item="firstItem">
+        <view class="dt">{{firstItem.name}}</view>
+        <view class="dd">
+            <view class="radio_list {{firstItem.rowClass}}">
+                <view 
+                    class="radio  {{firstItem.answer==item.code?'act':''}}" 
+                    wx:for="{{firstItem.options}}" wx:key="code"
+                    bindtap="changeRadioFn" data-obj="formData.{{keyName}}.answer" data-code="{{item.code}}"
+                >
+                    <view class="cir"><icon></icon></view>
+                    <text>{{item.name}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="dl">
+        <view class="dt">手机号</view>
+        <view class="dd">
+            <input 
+                class="input" type="number" bindinput="changePhoneFn" 
+                placeholder="请输入正确的手机号" placeholder-class="placeholder"
+            ></input>
+        </view>
+    </view>
+</view>
+<navigator class="more_btn" url="/pages/questionnaire-result/questionnaire-result">查看我的测试报告 >></navigator>
+
+<view class="cy_btn" bindtap="submitFn">了解一下睡眠质量问题解决方案</view>
+
+
+<!-- 成功提示弹窗 -->
+<view class='mask_bg' wx:if="{{formPop}}">
+    <view class='mask_bg_ctn'>
+        <view class='pop_mdl tjcg_box'>
+            <image class="img" src="{{imgUrl}}/img/result_bmcg.png"></image>
+            <view class="title">提交成功</view>
+            <view class="tjcg_btm">
+                <image class="ewm" src="{{imgUrl}}/img/ewm.jpg" show-menu-by-longpress="true" bindtap="previewImgFn"></image>
+                <view class="p"><text>您可以微信关注公众号
+                “变Time细胞”了解更
+                多改善睡眠质量的方法</text></view>
+            </view>
+            
+        </view>
+    </view>
+</view>
+
+

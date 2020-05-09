@@ -1,0 +1,36 @@
+
+page{background:#ededed; padding-bottom:120rpx;}
+
+.head_img{width:100%; line-height:0; font-size:0;}
+.head_img .img{width:100%;}
+
+.form_box{background:#fff; border-radius:20rpx; padding:10rpx 30rpx 0; margin:-70rpx 20rpx 0; position:relative; z-index: 9;}
+.form_box .logo{width:50%; position:absolute; left:50%; top:200rpx; opacity: .08;}
+.form_box .dl{padding:25rpx 0; border-bottom:2rpx solid #ededed;  overflow: hidden;}
+.form_box .dl:last-child{border-bottom:none;}
+.form_box .dt{height:40rpx; line-height:40rpx; color:#888888; font-size:28rpx; width:170rpx; float:left;}
+.form_box .dd{overflow: hidden; display: block; }
+.form_box .dd .txt{font-size:28rpx; color:#2d929a; line-height:40rpx;}
+.form_box .dd .input{ line-height:40rpx; height:40rpx;  box-sizing: border-box;  font-size:28rpx;}
+.form_box .dd .input.placeholder{color:#999;}
+
+/* .cy_btn{display:block;  height:100rpx; line-height:100rpx; background:#2d929a; border-radius:50rpx; text-align: center; font-size:36rpx; color:#fff;  margin:80rpx 70rpx; } */
+.cy_btn{display:block;  height:100rpx; line-height:100rpx; background:#2d929a; text-align: center; font-size:36rpx; color:#fff;  position:fixed; bottom:0; left:0; width:100%; z-index:999;}
+
+.radio_list{ margin-bottom:-20rpx;}
+.radio_list .radio{display:inline-block; width:33.3%;  padding-bottom:20rpx; }
+.radio_list .radio .cir{display:inline-block; width:14rpx; height:14rpx; border-radius:100%; border:2rpx solid #a4a4a4; padding:4rpx; background:#fff; font-size:0; line-height:0; margin-right:10rpx; vertical-align: top; position:relative; top:7rpx;}
+.radio_list .radio .cir icon{display:inline-block; width:14rpx; height:14rpx; background:#fff; border-radius:100%;}
+.radio_list .radio text{display:inline-block; font-size:30rpx; color:#666; line-height:40rpx; vertical-align: top;}
+.radio_list .radio.act .cir{ border-color:#2d929a;}
+.radio_list .radio.act .cir icon{background:#2d929a;}
+.radio_list.two .radio{width:50%;}
+
+.tjcg_box{padding:60rpx 40rpx; box-sizing: border-box;}
+.tjcg_box .img{display:inline-block; width:180rpx; height:180rpx;}
+.tjcg_box .p{line-height:50rpx; font-size:30rpx; color:#666666; overflow: hidden; text-align:left; padding-top:15rpx;}
+.tjcg_btm{overflow:hidden; margin-top:40rpx;}
+.tjcg_btm .ewm{width:180rpx; height:180rpx;  float:left; margin-right:20rpx;}
+
+
+.more_btn{color:#1989fa; font-size:28rpx; text-align: center; margin:20rpx 0; height:50rpx; line-height:50rpx; display:block; }

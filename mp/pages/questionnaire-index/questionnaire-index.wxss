@@ -1,0 +1,22 @@
+
+.enter_head{width:100%; font-size:0; line-height:0; height:435rpx;}
+.enter_head .img{width:100%;}
+.second_tit{background:#ededed; font-size:28rpx; line-height:40rpx; color:#2d929a; padding:10rpx 30rpx; text-align: left; font-weight: bold;}
+.enter_ctn{text-align: center; padding:70rpx 60rpx 0;}
+.enter_ctn .logo{width:320rpx;}
+.enter_ctn .h2{font-size:48rpx; color:#333; font-weight:bold; margin-bottom:20rpx;}
+.enter_ctn .h3{font-size:40rpx; color:#333; margin-bottom:20rpx;}
+.enter_ctn .p{font-size:26rpx; color:#888;}
+.enter_ctn .p2{font-size:36rpx; color:#2d929a; margin-bottom:40rpx; line-height:40rpx;}
+
+.enter_wrap{margin:80rpx auto 0; width:100%; padding:0 60rpx; box-sizing: border-box; }
+.enter_btn{display:block; width:550rpx; height:100rpx; line-height:100rpx; background:#2d929a; font-size:32rpx; color:#fff; text-align: center; border-radius:50rpx; }
+
+.sq_pop{position:relative; padding-bottom:50rpx;}
+.sq_pop .close{position:absolute; top:10rpx; right:20rpx; width:60rpx; height:60rpx; text-align: center; line-height:60rpx; font-size:50rpx;}
+.sq_pop .title{font-weight:normal; border-bottom:2rpx solid #ddd; padding:10rpx 0rpx 20rpx;}
+.sq_pop .tip_img{width:80%;}
+.sq_pop .p{display:block; padding:0 40rpx; line-height:50rpx;}
+.sq_pop .btn{background:#2d929a; height:70rpx; line-height:70rpx; border-radius:30rpx; color:#fff; font-size:30rpx; text-align: center; margin:0 100rpx;}
+.sq_pop .btn.hover{opacity: .8;}
+

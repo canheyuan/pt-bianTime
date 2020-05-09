@@ -1,0 +1,44 @@
+
+<view class="statistics_page">
+    <!-- <view class="h2">各项指标的 PSQI 人均统计情况</view> -->
+
+    <view class="statistics_list">
+        <!-- 性别统计统计 -->
+        <view class="item">
+            <canvas 
+                canvas-id="sexCharts" class="canvas" style="width:100%; height:100%;"
+            ></canvas>
+        </view>
+
+        <!-- 年龄统计 -->
+        <view class="item">
+            <canvas 
+                canvas-id="ageCharts" class="canvas" style="width:100%; height:100%;"
+            ></canvas>
+        </view>
+
+        <!-- 婚姻统计 -->
+        <view class="item">
+            <canvas 
+                canvas-id="liveSituationCharts" class="canvas" style="width:100%; height:100%;"
+            ></canvas>
+        </view>
+        
+        <!-- 职业现状统计 -->
+        <view class="item">
+            <canvas 
+                canvas-id="jobSituationCharts" class="canvas" style="width:100%; height:100%;"
+            ></canvas>
+        </view>
+
+        <!-- 收入统计 -->
+        <view class="item">
+            <canvas 
+                canvas-id="incomeCharts" class="canvas" style="width:100%; height:100%;"
+            ></canvas>
+        </view>
+    </view>
+
+    <navigator class="cy_btn" url="/pages/questionnaire-form/questionnaire-form">了解一下睡眠质量问题解决方案</navigator>
+</view>
+

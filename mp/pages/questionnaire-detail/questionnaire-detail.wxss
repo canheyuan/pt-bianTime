@@ -1,0 +1,49 @@
+
+page{background:#ededed; padding:110rpx 0 80rpx;}
+
+.top_bar{background:#fff; position:fixed; top:0; left:0; width:100%; z-index:99; box-shadow: 0 0 24rpx 8rpx rgba(0,0,0,.1);}
+.top_bar .h3{font-size:30rpx; font-weight:bold; color:#333; padding:20rpx 30rpx 0; line-height:30rpx; text-align: center;}
+.progress_bar{padding:20rpx 110rpx 20rpx 30rpx; position:relative;}
+.progress_bar .num{position:absolute; right:30rpx; top:10rpx; font-size:24rpx; line-height:28rpx;  color:#2d929a;}
+.progress_bar .bar{height:8rpx; background:#cfcfcf; border-radius:4rpx; font-size:0; line-height:0;}
+.progress_bar .bar view{height:8rpx; background:#2d929a; display: inline-block; border-radius:4rpx; width:0; transition:all .3s;}
+
+
+.ques_ctn{padding:20rpx 30rpx;}
+.ques_dl{background:#fff; padding:20rpx 20rpx 30rpx; margin-bottom:30rpx;}
+.ques_dl.tip_red{border:2rpx solid #ff976a;}
+.ques_dl .dt{ margin-bottom:30rpx; padding-right:30rpx;}
+.ques_dl .dt .num{width:50rpx; height:50rpx; text-align: center; line-height:50rpx; font-size:26rpx; color:#fff; border-radius:15rpx; background:#2d929a; float:left; margin-right:20rpx; font-weight:normal; vertical-align: top;}
+.ques_dl .dt .txt{display:block; overflow: hidden; line-height:50rpx;font-size:30rpx; font-weight:bold; color:#333;}
+.ques_dl .dd {margin-left:70rpx;}
+.ques_dl .dd_son{margin-bottom:50rpx;}
+.ques_dl .dd_son:last-child{margin-bottom:0;}
+.ques_dl .dd .second_title{font-size:28rpx; color:#2d929a; display:block; margin-bottom:20rpx; font-weight: bold;}
+
+.radio_list{ margin-bottom:-20rpx; overflow: hidden;}
+.radio_list .radio{display:inline-block; width:33.3%;  padding-bottom:20rpx; }
+.radio_list .radio .cir{display:inline-block; width:14rpx; height:14rpx; border-radius:100%; border:2rpx solid #a4a4a4; padding:4rpx; background:#fff; font-size:0; line-height:0; margin-right:10rpx; vertical-align: top; position:relative; top:7rpx;}
+.radio_list .radio .cir icon{display:inline-block; width:14rpx; height:14rpx; background:#fff; border-radius:100%;}
+.radio_list .radio text{display:inline-block; font-size:30rpx; color:#666; line-height:40rpx; vertical-align: top;}
+.radio_list .radio.act .cir{ border-color:#2d929a;}
+.radio_list .radio.act .cir icon{background:#2d929a;}
+.radio_list.two .radio{width:50%;}
+
+.submit_btn{display:block; width:400rpx; margin:0 auto; background:#2d929a; height:100rpx; line-height:100rpx; border-radius:150rpx; text-align: center; font-size:32rpx; color:#fff;}
+
+.slider_box{padding:20rpx 50rpx 50rpx; position:relative;}
+.slider_box .txt_s,
+.slider_box .txt_e{font-size:24rpx; color:#666; line-height:30rpx; position:absolute; bottom:0;  text-align: center; width:200rpx; }
+.slider_box .txt_s{left:50rpx; margin-left:-100rpx; }
+.slider_box .txt_e{right:50rpx; margin-right:-100rpx;}
+.slider_btn{height:30rpx; line-height:30rpx; width:100rpx; text-align:center; font-size:24rpx; color:#fff; background:#2d929a; border-radius:15rpx;}
+
+
+.change_time{display:block; width:300rpx; margin:50rpx auto 10rpx; border:2rpx solid #2d929a; background:#fff; height:70rpx; line-height:70rpx; border-radius:10rpx; text-align: center; font-size:28rpx; color:#2d929a;}
+
+.des_textarea{width:500rpx; border:2rpx solid #2d929a; border-radius:10rpx; padding:15rpx; margin-top:40rpx;}
+.des_textarea .textarea{width:100%; height:80rpx; font-size:30rpx; color:#333; line-height:40rpx;}
+
+
+
+

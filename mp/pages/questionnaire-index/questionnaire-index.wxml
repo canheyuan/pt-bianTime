@@ -1,0 +1,36 @@
+
+<view class="enter_head">
+    <image class="img" mode="widthFix" src="{{imgUrl}}/img/head_top.jpg"></image>
+</view>
+<view class="second_tit">睡眠持续不好，是免疫低下，正常状态下滑的开始</view>
+<view class="enter_ctn">
+    <image class="logo" mode="widthFix" src="{{imgUrl}}/img/logo.png"></image>
+    <view class="p2">《睡眠医学研究中心》</view>
+    <view class="h2">针对近1个月睡眠情况</view>
+    <view class="h3">5-10分钟完成最佳</view>
+    <view class="p">——本评分源于匹兹堡睡眠质量指数量表</view>
+</view>
+
+<view class="enter_wrap" >
+    <button class="enter_btn" bindtap="gotoDetailFn">马上了解您的睡眠情况吧</button>
+</view>
+
+<!-- 授权提示弹窗 -->
+<view class="mask_bg" hidden="{{!sqPopShow}}">
+    <view class="mask_bg_ctn">
+        <view class="sq_pop pop_mdl">
+            <view class="close" bindtap="tipPopShowFn">x</view>
+            <view class="title">需要您的授权</view>
+            <text class="p">为了提供更好的服务
+            请在稍后的提示框中点击“允许”</text>
+            <image class="tip_img" src="{{imgUrl}}/img/login_tip.png" mode="widthFix"></image>
+            <button 
+                open-type="getUserInfo" bindgetuserinfo="getUserInfoFn" class="btn" hover-class="hover"
+                lang="zh_CN"
+            >我知道了</button>
+        </view>
+    </view>
+</view>
+
+
+

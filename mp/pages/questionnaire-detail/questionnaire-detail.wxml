@@ -1,0 +1,76 @@
+
+<!-- 顶部固定条 -->
+<view class="top_bar">
+    <view class="h3">近一个月您的睡眠情况</view>
+    <view class="progress_bar">
+        <view class="bar"><view style="width:{{progress.width}}%"></view></view>
+        <view class="num">{{progress.num}}/{{progress.total}}</view>
+    </view>
+</view>
+
+
+<view class="ques_ctn">
+    <view class="ques_dl {{firstItem.tipClass}}" wx:for="{{faqData}}" wx:key="id" wx:for-item="firstItem" wx:for-index="firstIndex">
+
+        <view class="dt">
+            <text class="num">{{firstIndex+1}}</text>
+            <text class="txt">{{firstItem.content}}</text>
+        </view>
+
+        <picker 
+            class="change_time" mode="multiSelector" range="{{firstItem.picker}}" 
+            wx:if="{{firstItem.isChangeTime}}" 
+            bindchange="changeTimeFn" bindcolumnchange="column1ChangeFn" data-index="{{firstIndex}}"
+        >
+            <view class="txt">{{firstItem.changeVal?firstItem.changeVal:'请选择时间'}}</view>
+        </picker>
+
+        <block wx:if="{{!firstItem.isChangeTime}}">
+        <!-- 无子项 -->
+        <view class="dd" wx:if="{{!firstItem.subList}}">
+            <view class="radio_list two">
+                <view 
+                    wx:for="{{firstItem.optionList}}" wx:key="id"
+                    class="radio {{firstItem.answerId==item.id?'act':''}}"
+                    bindtap="changeRadioFn" 
+                    data-id="{{item.id}}" 
+                    data-first_index="{{firstIndex}}"
+                    data-obj="faqData[{{firstIndex}}].answerId"
+                >
+                    <view class="cir"><icon></icon></view>
+                    <text>{{item.content}}</text>
+                </view>
+            </view>
+        </view>
+
+        <!-- 有子项 -->
+        <block wx:if="{{firstItem.subList}}">
+            <view 
+                class="dd dd_son"
+                wx:for="{{firstItem.subList}}" wx:key="id" 
+                wx:for-item="secondItem" wx:for-index="secondIndex"
+            >
+                <view class="second_title">{{secondItem.content}}</view>
+                <view class="radio_list two">
+                    <view 
+                        class="radio  {{secondItem.answerId==item.id?'act':''}}" 
+                        wx:for="{{secondItem.optionList}}"  wx:key="id"
+                        bindtap="changeRadioFn" data-id="{{item.id}}" data-first_index="{{firstIndex}}"
+                        data-obj="faqData[{{firstIndex}}].subList[{{secondIndex}}].answerId"
+                    >
+                        <view class="cir"><icon></icon></view>
+                        <text>{{item.content}}</text>
+                    </view>
+                </view>
+                <view class="des_textarea" wx:if="{{firstIndex==7 && secondItem.answerId && secondItem.answerId!=69}}">
+                    <textarea class="textarea" placeholder="请描述下影响因素(20字内)" maxlength="20" bindblur="affectFactorFn"></textarea>
+                </view>
+            </view>
+        </block>
+        </block>
+    </view>
+</view>
+
+<view class="submit_btn" bindtap="submitFn">生成我的睡眠报告</view>
+
+

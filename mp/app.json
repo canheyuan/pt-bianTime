@@ -1,0 +1,18 @@
+{
+    "pages": [
+        "pages/questionnaire-index/questionnaire-index",
+        "pages/questionnaire-result/questionnaire-result",
+        "pages/questionnaire-detail/questionnaire-detail",
+        "pages/questionnaire-statistics/questionnaire-statistics",
+        "pages/questionnaire-form/questionnaire-form",
+        "pages/web-view/web-view"
+        
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#2d929a",
+        "navigationBarTextStyle": "white",
+        "backgroundTextStyle": "light",
+        "navigationBarTitleText": "变 · Time"
+    },
+    "sitemapLocation": "sitemap.json"
+}

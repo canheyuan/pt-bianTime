@@ -1,0 +1,65 @@
+
+<view class="result_page">
+    <view class="h2">您的睡眠报告已生成</view>
+    <view class="baogao_box">
+        <view class="dl">
+            <view class="dt">睡眠质量</view>
+            <view class="dd"><text class="txt">{{resultDes.ans1[resultData.ans1]}}</text></view>
+        </view>
+        <view class="dl">
+            <view class="dt">入睡时间</view>
+            <view class="dd"><text class="txt">{{resultDes.ans2[resultData.ans2]}}</text></view>
+        </view>
+        <view class="dl">
+            <view class="dt">睡眠时间</view>
+            <view class="dd"><text class="txt">{{resultDes.ans3[resultData.ans3]}}</text></view>
+        </view>
+        <view class="dl">
+            <view class="dt">睡眠效率</view>
+            <view class="dd"><text class="txt">{{resultData.ans4Rate}}%</text></view>
+        </view>
+        <view class="dl">
+            <view class="dt">障碍</view>
+            <view class="dd"><text class="txt">{{resultDes.ans5[resultData.ans5]}}</text></view>
+        </view>
+        <view class="dl">
+            <view class="dt">药物辅助</view>
+            <view class="dd"><text class="txt">{{resultDes.ans6[resultData.ans6]}}</text></view>
+        </view>
+        <view class="dl">
+            <view class="dt">影响生活可能</view>
+            <view class="dd"><text class="txt">{{resultDes.ans7[resultData.ans7]}}</text></view>
+        </view>
+        <view class="dl">
+            <view class="dt">PSQI总分</view>
+            <view class="dd"><text class="txt" style="font-size:40rpx; font-weight:bold; color:orange;">{{resultData.psqi}}分</text></view>
+        </view>
+        <view class="dl" style="height:auto; padding-bottom:20rpx; border-bottom:none;">
+            <view class="dt">睡眠质量描述</view>
+            <view class="dd" style="clear:both;">
+                <view class="jd_mdl">
+                    <view class="txt2">优</view>
+                    <view class="jd_box"><view class="tri" style="left:{{resultData.desScore}}%"></view></view>
+                    <view class="txt1">差</view>
+                </view>
+            </view>
+        </view>
+        <view class="tip_box">
+            <image wx:if="{{resultData.psqi<=6}}" class="img" mode="widthFix" src="{{imgUrl}}/img/tip_img05.jpg"></image>
+            <image wx:if="{{resultData.psqi==7}}" class="img" mode="widthFix" src="{{imgUrl}}/img/tip_img04.jpg"></image>
+            <image wx:if="{{resultData.psqi>=8 && resultData.psqi<=10}}" class="img" mode="widthFix" src="{{imgUrl}}/img/tip_img01.jpg"></image>
+            <image wx:if="{{resultData.psqi>=11 && resultData.psqi<=14}}" class="img" mode="widthFix" src="{{imgUrl}}/img/tip_img02.jpg"></image>
+            <image wx:if="{{resultData.psqi>=15}}" class="img" mode="widthFix" src="{{imgUrl}}/img/tip_img03.jpg"></image>
+        </view>
+        <!-- <view class="dl" style="height:auto; padding:20rpx 0;" wx:if="{{resultData.psqi>11}}">
+            <view class="dd" style="line-height:40rpx;"><text class="txt" style="color:#ff976a;">温馨提示：请注意，达到这个分值，并长期处于这个分值区间，容易患皮肤粗糙、皮肤容易老化、免疫力下降、精神状态萎靡等；</text></view>
+        </view>
+        <view class="dl" style="height:auto; padding-bottom:20rpx;" wx:if="{{resultData.psqi>=8 && resultData.psqi<=11}}">
+            <view class="dd"><text class="txt" style="color:#orange;">长期处于此分值容易抑郁，健忘，肝肾功能衰退等疾病！</text></view>
+        </view> -->
+    </view>
+
+    <navigator class="more_btn" url="/pages/questionnaire-statistics/questionnaire-statistics">查看人均PSQI统计情况 >></navigator>
+    <navigator class="cy_btn" url="/pages/questionnaire-form/questionnaire-form">了解一下睡眠质量问题解决方案</navigator>
+</view>
+
